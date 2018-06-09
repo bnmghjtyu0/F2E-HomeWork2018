@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="css/01/01.css">
+</head>
+
+<body>
+    <!-- 設計稿 -->
+    <!-- https://hexschool.github.io/THE_F2E_Design/todolist/ -->
+    <div id="app">
+        <header class="header">
+            <ul class="header__ul" ref="ul">
+                <li class="active" v-on:click="click1()">
+                    <a href="#">My Tasks</a>
+                </li>
+                <li>
+                    <a href="#" v-on:click="click2()">In Progress</a>
+                </li>
+                <li>
+                    <a href="#" v-on:click="click3()">Completed</a>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <div class="container mt-3">
+                <input type="text" class="form-control" placeholder="Add Task">
+                <article class="todolist">
+
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Collapsible Group Item #1
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse multi-collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                    3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Collapsible Group Item #2
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse multi-collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                    3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Collapsible Group Item #3
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse multi-collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                    3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <ul class="todolist__ul mt-3">
+
+                        <li class="todolist__ul__li">
+                            <div class="d-flex list">
+                                <div class="col-auto list__left">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="col list__center">
+                                    <h4 class="title">Type Something here</h4>
+                                    <article class="info d-flex">
+                                        <div id="date" class="todolist__date mr-2">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>10/2</span>
+                                        </div>
+                                        <div id="file" class="todolist__date mr-2">
+                                            <i class="far fa-file"></i>
+                                        </div>
+                                        <div id="comment" class="todolist__date">
+                                            <i class="far fa-comment"></i>
+                                        </div>
+
+                                    </article>
+                                </div>
+                                <div class="col-auto list__right">
+                                    <a href="javascript:;">
+                                        <i class="far fa-star"></i>
+                                    </a>
+                                    <a href="javascript:;" v-on:click="openTodoEdit()">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="todolistEdit hide" ref="todolistEdit">
+                                <p>12313123</p>
+                                <p>12313123</p>
+                                <p>12313123</p>
+                                <p>12313123</p>
+                                <p>12313123</p>
+                                <p>12313123</p>
+                                <p>12313123</p>
+                            </div>
+
+                        </li>
+                        123
+                    </ul>
+                </article>
+
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.9/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            methods: {
+                css: function (t, s) {
+                    s = document.createElement("style");
+                    s.innerText = t;
+                    document.body.appendChild(s);
+                },
+                click1: function () {
+                    let ul = this.$refs.ul.classList[0];
+                    this.css(`.${ul}:after{left:0px !important}`);
+                },
+                click2: function () {
+                    let ul = this.$refs.ul.classList[0];
+                    this.css(`.${ul}:after{left:99px !important}`);
+                },
+                click3: function () {
+                    let ul = this.$refs.ul.classList[0];
+                    this.css(`.${ul}:after{left:200px !important}`);
+                }
+
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+body {
+  font: 1rem / 1.2 "微軟正黑體", Helvetic;
+  background: #e1e1e1;
+}
+
+.container {
+  max-width: 620px;
+}
+
+.header {
+  background: #4b91e2;
+  text-align: center;
+}
+
+.header__ul {
+  position: relative;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.header__ul:after {
+  content: "";
+  width: 90px;
+  height: 3px;
+  background: #15467f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 200ms;
+}
+
+.header__ul li {
+  display: inline-block;
+}
+
+.header__ul li:hover a, .header__ul li.active a {
+  color: #fff;
+}
+
+.header__ul li a {
+  display: block;
+  padding: 12px;
+  color: #15467f;
+  text-decoration: none !important;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
+.todolist__ul {
+  padding-left: 0;
+}
+
+.todolist__ul__li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.todolist__ul__li.active {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.todolist__ul__li .list {
+  padding: 16px 32px;
+  background: #f2f2f2;
+  border-radius: 4px 4px 0 0;
+}
+
+.todolist__ul__li .list__left {
+  padding: 0;
+}
+
+.todolist__ul__li .list__center .title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.todolist__ul__li .list__center .info {
+  font-size: 0.9375em;
+}
+
+.todolist__ul__li .list__right a {
+  margin-left: 20px;
+}
+
+.todolist__ul__li .list__right a i {
+  font-size: 20px;
+}
+
+.todolist .todolistEdit {
+  position: relative;
+  border-top: 2px solid #c8c8c8;
+  background: #f2f2f2;
+  border-radius: 0 0 4px 4px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+/*# sourceMappingURL=01.css.map */
